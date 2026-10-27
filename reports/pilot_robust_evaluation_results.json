@@ -1,0 +1,174 @@
+{
+  "baseline_model": {
+    "checkpoint": "best_deepfake_audio_cnn.pth",
+    "results": {
+      "overall": {
+        "samples": 30,
+        "accuracy": 0.9667,
+        "balanced_accuracy": 0.9667,
+        "precision": 0.9375,
+        "recall": 1.0,
+        "f1": 0.9677,
+        "roc_auc": 1.0,
+        "fpr": 0.0667,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TP": 15,
+          "TN": 14,
+          "FP": 1,
+          "FN": 0
+        }
+      },
+      "per_domain": {
+        "ASVspoof2019_studio": {
+          "samples": 14,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "TP": 0,
+            "TN": 14,
+            "FP": 0,
+            "FN": 0
+          },
+          "mean_spoof_prob": 0.0012
+        },
+        "LibriSpeech_Human_Demo": {
+          "samples": 1,
+          "accuracy": 0.0,
+          "confusion_matrix": {
+            "TP": 0,
+            "TN": 0,
+            "FP": 1,
+            "FN": 0
+          },
+          "mean_spoof_prob": 0.8614
+        },
+        "ASVspoof2019_spoof": {
+          "samples": 14,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "TP": 14,
+            "TN": 0,
+            "FP": 0,
+            "FN": 0
+          },
+          "mean_spoof_prob": 1.0
+        },
+        "SAPI5_TTS_Demo": {
+          "samples": 1,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "TP": 1,
+            "TN": 0,
+            "FP": 0,
+            "FN": 0
+          },
+          "mean_spoof_prob": 1.0
+        }
+      }
+    },
+    "demo_real": {
+      "pred_idx": 1,
+      "label": "spoof (fake)",
+      "bonafide_prob": 0.1386,
+      "spoof_prob": 0.8614
+    },
+    "demo_synth": {
+      "pred_idx": 1,
+      "label": "spoof (fake)",
+      "bonafide_prob": 0.0,
+      "spoof_prob": 1.0
+    },
+    "whatsapp": {
+      "pred_idx": 1,
+      "label": "spoof (fake)",
+      "bonafide_prob": 0.0023,
+      "spoof_prob": 0.9977
+    }
+  },
+  "robust_model": {
+    "checkpoint": "robust_deepfake_audio_cnn.pth",
+    "results": {
+      "overall": {
+        "samples": 30,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TP": 15,
+          "TN": 15,
+          "FP": 0,
+          "FN": 0
+        }
+      },
+      "per_domain": {
+        "ASVspoof2019_studio": {
+          "samples": 14,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "TP": 0,
+            "TN": 14,
+            "FP": 0,
+            "FN": 0
+          },
+          "mean_spoof_prob": 0.0
+        },
+        "LibriSpeech_Human_Demo": {
+          "samples": 1,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "TP": 0,
+            "TN": 1,
+            "FP": 0,
+            "FN": 0
+          },
+          "mean_spoof_prob": 0.003
+        },
+        "ASVspoof2019_spoof": {
+          "samples": 14,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "TP": 14,
+            "TN": 0,
+            "FP": 0,
+            "FN": 0
+          },
+          "mean_spoof_prob": 0.9987
+        },
+        "SAPI5_TTS_Demo": {
+          "samples": 1,
+          "accuracy": 1.0,
+          "confusion_matrix": {
+            "TP": 1,
+            "TN": 0,
+            "FP": 0,
+            "FN": 0
+          },
+          "mean_spoof_prob": 1.0
+        }
+      }
+    },
+    "demo_real": {
+      "pred_idx": 0,
+      "label": "bonafide (real)",
+      "bonafide_prob": 0.997,
+      "spoof_prob": 0.003
+    },
+    "demo_synth": {
+      "pred_idx": 1,
+      "label": "spoof (fake)",
+      "bonafide_prob": 0.0,
+      "spoof_prob": 1.0
+    },
+    "whatsapp": {
+      "pred_idx": 0,
+      "label": "bonafide (real)",
+      "bonafide_prob": 0.9522,
+      "spoof_prob": 0.0478
+    }
+  }
+}

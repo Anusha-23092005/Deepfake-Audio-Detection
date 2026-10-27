@@ -1,0 +1,292 @@
+{
+  "checkpoint_sha256": "6ec42917f8fd0e87aa6a5a29970fde4a4f7b91e87b90b0ee2c42a0e7ffc8afd1",
+  "asvspoof_dev_benchmark": {
+    "Pipeline 1: Baseline (No filter, Single crop)": {
+      "total_samples": 24,
+      "accuracy": 1.0,
+      "confusion_matrix": {
+        "TP": 12,
+        "TN": 12,
+        "FP": 0,
+        "FN": 0
+      },
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "mean_bonafide_real_prob": 99.87,
+      "mean_spoof_fake_prob": 98.41
+    },
+    "Pipeline 2: Speech HP 65 Hz (Single crop)": {
+      "total_samples": 24,
+      "accuracy": 1.0,
+      "confusion_matrix": {
+        "TP": 12,
+        "TN": 12,
+        "FP": 0,
+        "FN": 0
+      },
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "mean_bonafide_real_prob": 99.9,
+      "mean_spoof_fake_prob": 97.95
+    },
+    "Pipeline 3: Speech HP 80 Hz (Single crop)": {
+      "total_samples": 24,
+      "accuracy": 1.0,
+      "confusion_matrix": {
+        "TP": 12,
+        "TN": 12,
+        "FP": 0,
+        "FN": 0
+      },
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "mean_bonafide_real_prob": 99.93,
+      "mean_spoof_fake_prob": 96.47
+    },
+    "Pipeline 4: Multi-Window (No filter, 50% overlap)": {
+      "total_samples": 24,
+      "accuracy": 1.0,
+      "confusion_matrix": {
+        "TP": 12,
+        "TN": 12,
+        "FP": 0,
+        "FN": 0
+      },
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "mean_bonafide_real_prob": 96.26,
+      "mean_spoof_fake_prob": 98.27
+    },
+    "Pipeline 5: Speech HP 65 Hz + Multi-Window": {
+      "total_samples": 24,
+      "accuracy": 1.0,
+      "confusion_matrix": {
+        "TP": 12,
+        "TN": 12,
+        "FP": 0,
+        "FN": 0
+      },
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "mean_bonafide_real_prob": 96.26,
+      "mean_spoof_fake_prob": 97.81
+    },
+    "Pipeline 6: Speech HP 80 Hz + Multi-Window": {
+      "total_samples": 24,
+      "accuracy": 1.0,
+      "confusion_matrix": {
+        "TP": 12,
+        "TN": 12,
+        "FP": 0,
+        "FN": 0
+      },
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "mean_bonafide_real_prob": 96.08,
+      "mean_spoof_fake_prob": 96.37
+    }
+  },
+  "target_speech_samples": {
+    "demo_real_speech.wav": {
+      "description": "Human (LibriSpeech clean)",
+      "pipelines": {
+        "Pipeline 1: Baseline (No filter, Single crop)": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.1386,
+          "spoof_probability": 0.8614,
+          "num_windows": 1,
+          "window_real_probabilities": [
+            0.1386
+          ]
+        },
+        "Pipeline 2: Speech HP 65 Hz (Single crop)": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.3332,
+          "spoof_probability": 0.6668,
+          "num_windows": 1,
+          "window_real_probabilities": [
+            0.3332
+          ]
+        },
+        "Pipeline 3: Speech HP 80 Hz (Single crop)": {
+          "predicted_label": "bonafide (real)",
+          "real_probability": 0.5816,
+          "spoof_probability": 0.4184,
+          "num_windows": 1,
+          "window_real_probabilities": [
+            0.5816
+          ]
+        },
+        "Pipeline 4: Multi-Window (No filter, 50% overlap)": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.035,
+          "spoof_probability": 0.965,
+          "num_windows": 5,
+          "window_real_probabilities": [
+            0.1386,
+            0.0332,
+            0.0,
+            0.0029,
+            0.0002
+          ]
+        },
+        "Pipeline 5: Speech HP 65 Hz + Multi-Window": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0846,
+          "spoof_probability": 0.9154,
+          "num_windows": 5,
+          "window_real_probabilities": [
+            0.3332,
+            0.0849,
+            0.0,
+            0.0046,
+            0.0004
+          ]
+        },
+        "Pipeline 6: Speech HP 80 Hz + Multi-Window": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.1673,
+          "spoof_probability": 0.8327,
+          "num_windows": 5,
+          "window_real_probabilities": [
+            0.5816,
+            0.2481,
+            0.0,
+            0.0059,
+            0.0006
+          ]
+        }
+      }
+    },
+    "demo_synthetic_speech.wav": {
+      "description": "Synthetic TTS (SAPI5)",
+      "pipelines": {
+        "Pipeline 1: Baseline (No filter, Single crop)": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0,
+          "spoof_probability": 1.0,
+          "num_windows": 1,
+          "window_real_probabilities": [
+            0.0
+          ]
+        },
+        "Pipeline 2: Speech HP 65 Hz (Single crop)": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0,
+          "spoof_probability": 1.0,
+          "num_windows": 1,
+          "window_real_probabilities": [
+            0.0
+          ]
+        },
+        "Pipeline 3: Speech HP 80 Hz (Single crop)": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0,
+          "spoof_probability": 1.0,
+          "num_windows": 1,
+          "window_real_probabilities": [
+            0.0
+          ]
+        },
+        "Pipeline 4: Multi-Window (No filter, 50% overlap)": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0,
+          "spoof_probability": 1.0,
+          "num_windows": 4,
+          "window_real_probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Pipeline 5: Speech HP 65 Hz + Multi-Window": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0,
+          "spoof_probability": 1.0,
+          "num_windows": 4,
+          "window_real_probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "Pipeline 6: Speech HP 80 Hz + Multi-Window": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0,
+          "spoof_probability": 1.0,
+          "num_windows": 4,
+          "window_real_probabilities": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "WhatsApp Voice Note": {
+      "description": "Human (WhatsApp Opus mobile)",
+      "pipelines": {
+        "Pipeline 1: Baseline (No filter, Single crop)": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0023,
+          "spoof_probability": 0.9977,
+          "num_windows": 1,
+          "window_real_probabilities": [
+            0.0023
+          ]
+        },
+        "Pipeline 2: Speech HP 65 Hz (Single crop)": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0039,
+          "spoof_probability": 0.9961,
+          "num_windows": 1,
+          "window_real_probabilities": [
+            0.0039
+          ]
+        },
+        "Pipeline 3: Speech HP 80 Hz (Single crop)": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0085,
+          "spoof_probability": 0.9915,
+          "num_windows": 1,
+          "window_real_probabilities": [
+            0.0085
+          ]
+        },
+        "Pipeline 4: Multi-Window (No filter, 50% overlap)": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0033,
+          "spoof_probability": 0.9967,
+          "num_windows": 2,
+          "window_real_probabilities": [
+            0.0023,
+            0.0043
+          ]
+        },
+        "Pipeline 5: Speech HP 65 Hz + Multi-Window": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0093,
+          "spoof_probability": 0.9907,
+          "num_windows": 2,
+          "window_real_probabilities": [
+            0.0039,
+            0.0148
+          ]
+        },
+        "Pipeline 6: Speech HP 80 Hz + Multi-Window": {
+          "predicted_label": "spoof (fake)",
+          "real_probability": 0.0554,
+          "spoof_probability": 0.9446,
+          "num_windows": 2,
+          "window_real_probabilities": [
+            0.0085,
+            0.1024
+          ]
+        }
+      }
+    }
+  }
+}

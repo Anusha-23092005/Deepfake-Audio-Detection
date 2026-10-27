@@ -1,0 +1,24 @@
+{
+    "dataset": "ASVspoof 2019 Logical Access - Development",
+    "samples_evaluated": 24844,
+    "accuracy": 0.986475607792626,
+    "balanced_accuracy": 0.9860341648458671,
+    "spoof_precision": 0.9983207769810293,
+    "spoof_recall": 0.986589522784356,
+    "spoof_f1": 0.9924204827430634,
+    "roc_auc": 0.9986448826239116,
+    "confusion_matrix": [
+        [
+            2511,
+            37
+        ],
+        [
+            299,
+            21997
+        ]
+    ],
+    "class_mapping": {
+        "0": "bonafide (real)",
+        "1": "spoof (fake)"
+    }
+}
